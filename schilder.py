@@ -9,7 +9,11 @@ from render import render
 def application(environ,start_response):   
     d = parse_qs(environ['QUERY_STRING'])
     response_body = render(d.get('text','Text fehlt')[0],
-                           d.get('seed',[1])[0])
+                           d.get('seed',[1])[0],
+                           d.get('align','left')[0],
+                           int(d.get('fillbackground','0')[0]),
+                           float(d.get('linespacing','0')[0]),
+                           float(d.get('rotation','1')[0])/10.0)
 
     # HTTP response code and message
     status = '200 OK'
