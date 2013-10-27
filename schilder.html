@@ -1,25 +1,82 @@
 <html>
+<head>
+<link rel='stylesheet' href='style.css'>
+</head>
 <body>
+<h1>Piratenschilder</h1>
+Das hier ist ein Programm, mit dem man das "Schilderdesign" der
+Piratenkampagne Deutschland 2013 automatisch für beliebige Texte
+erzeugen kann. <a href='steuerzeichen.html'>Steuerzeichen</a>
+<br/>
+<br/>
 <form action='schilder.py' method='get'>
-<textarea name='text'>
+<table>
+<tr>
+<td colspan=2>
+<textarea cols=30 rows=5 name='text'>
 Gib hier einen Text ein
 </textarea>
-<br/>
-Zeilenabstand (30...50): <input name='linespacing' value='30'>
-<br/>
-Rotation (~0.3...1): <input name='rotation' value='1'>
-<br/>
-Zufall (Ganze Zahl): <input name='seed' value='1'>
-<br/>
+</td>
+</tr>
+<tr>
+<td>
+Zeilenabstand (30...50):
+</td><td>
+<input name='linespacing' value='40'>
+</tr>
+<tr>
+<td>
+Rotation (~0.3...1):
+</td><td>
+<input name='rotation' value='1'>
+</td>
+</tr>
+<tr>
+<td>
+Zufall (Ganze Zahl):
+</td><td>
+<input name='seed' value='1'>
+</td>
+</tr>
+<tr>
+<td>
 Ausrichtung: 
-<input type='radio' name='align' value='left'> Links
-<input type='radio' name='align' value='center'> Mitte
-<input type='radio' name='align' value='right'> Rechts
-<br/>
+</td><td>
+<input type='radio' name='align' value='left'> Links<br/>
+<input type='radio' name='align' value='center'> Mitte<br/>
+<input type='radio' name='align' value='right'> Rechts<br/>
+</td>
+</tr>
+<tr>
+<td>
 Hintergrund Schwarz:
+</td>
+<td>
 <input type='checkbox' name='fillbackground' value='1'>
-<br/>
-<input type='submit'>
+</td>
+</tr>
+<tr>
+<tr>
+<td>
+Hintergrundfarben der Schilder:
+</td>
+<td>
+a: Schwarz<br/>
+b: <input type='text' name='c' value='3498DB'><br/>
+c: <input type='text' name='c' value='4C2582'><br/>
+d: <input type='text' name='c' value=''><br/>
+e: <input type='text' name='c' value=''><br/>
+</td>
+</tr>
+<tr>
+
+<td>
+<input type='submit' value='Bild erzeugen'>
+</td>
+</tr>
+</table>
 </form>
+
+<a href='impressum.html'>Impressum</a>
 </body>
 </html>
